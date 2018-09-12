@@ -1,23 +1,26 @@
 <?php
 
-namespace sisVentas;
+namespace Ventas;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
     protected $table='categoria';
-    protected $primaykey='idcategoria';
-    public $timestamps=false;
-    
+
+    protected $primaryKey = 'idcategoria';
+
+    public $timestamps = false;
+
+
     protected $fillable =[
-        'nombre',
-        'descripcion',
-        'condicion',
+    	'nombre',
+    	'descripcion',
+    	'condicion'
+
     ];
+
     protected $guarded = [
-        
+    	
     ];
-    
-    
 }

@@ -1,9 +1,10 @@
 <?php
 
-namespace sisVentas\Http\Controllers\Auth;
+namespace Ventas\Http\Controllers\Auth;
 
-use sisVentas\User;
-use sisVentas\Http\Controllers\Controller;
+use Ventas\User;
+use Ventas\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/ventas/venta';
 
     /**
      * Create a new controller instance.
@@ -58,14 +59,19 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \sisVentas\User
+     * @return \Ventas\User
      */
     protected function create(array $data)
     {
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => Hash::make($data['password']),
         ]);
+    }
+
+    public function showRegistrationForm()
+    {
+        return redirect('login')
     }
 }

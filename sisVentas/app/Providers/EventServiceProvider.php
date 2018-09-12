@@ -1,6 +1,6 @@
 <?php
 
-namespace sisVentas\Providers;
+namespace Ventas\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'sisVentas\Events\Event' => [
-            'sisVentas\Listeners\EventListener',
+        'Ventas\Events\Event' => [
+            'Ventas\Listeners\EventListener',
         ],
     ];
 

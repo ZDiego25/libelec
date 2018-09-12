@@ -1,8 +1,8 @@
 <?php
 
-namespace sisVentas\Http\Controllers\Auth;
+namespace Ventas\Http\Controllers\Auth;
 
-use sisVentas\Http\Controllers\Controller;
+use Ventas\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

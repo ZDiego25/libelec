@@ -1,10 +1,10 @@
 <?php
 
-namespace sisVentas\Http\Requests;
+namespace Ventas\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoriaForRequest extends FormRequest
+class CategoriaFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,7 @@ class CategoriaForRequest extends FormRequest
     public function rules()
     {
         return [
-            'nombre' =>'required|max:50',
+            'nombre'=>'required|max:50',
             'descripcion'=>'max:256',
         ];
     }
